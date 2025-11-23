@@ -3,27 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEURAL VAULT | Authorized Access</title>
-    
-    <meta name="description" content="The Neural Vault. Secure archive for high-fidelity generative AI assets, CPO logic, and prompt engineering.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>NEURAL VAULT | Authorized Assets</title>
+    <meta name="description" content="Secure Archive for AI Assets.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* THE NEURAL VAULT THEME */
+        /* DARK LUX THEME */
         :root {
             --bg: #050505;
-            --card-bg: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
             --text-main: #ffffff;
             --text-muted: #888888;
-            --accent: #0070f3; /* Vault Blue */
-            --glow: 0 0 40px rgba(0, 112, 243, 0.2);
+            --accent: #0070f3; 
+            --card-bg: rgba(255, 255, 255, 0.05);
         }
-
-        * { box-sizing: border-box; }
 
         body {
             background-color: var(--bg);
@@ -36,122 +28,66 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
-            overflow-x: hidden;
         }
 
-        /* VAULT GLOW */
-        body::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at 50% 0%, rgba(0, 112, 243, 0.15), transparent 60%);
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        .container {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
-            padding: 60px 40px;
-            max-width: 500px;
-            width: 100%;
-            border-radius: 24px;
-            text-align: center;
-            box-shadow: var(--glow);
-        }
-
-        .label {
-            font-size: 0.75rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 20px;
-            display: block;
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin: 0 0 20px 0;
-            letter-spacing: -1px;
-        }
-
-        p {
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 50px;
-            font-weight: 300;
-        }
+        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -1px; }
+        p { color: var(--text-muted); margin-bottom: 40px; text-align: center; }
 
         /* BUTTONS */
         .btn {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
             width: 100%;
+            max-width: 450px;
             padding: 20px;
-            margin-bottom: 16px;
+            margin-bottom: 15px;
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.2s ease;
-            font-size: 1rem;
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
+        /* PRIMARY ($5 Prompts - The "Easy" Buy) */
         .btn-primary {
-            background-color: var(--accent);
-            color: #fff;
-            border: 1px solid var(--accent);
-            box-shadow: 0 4px 14px 0 rgba(0,118,255,0.39);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,118,255,0.23);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: var(--text-main);
+            color: #000;
             border-color: #fff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
         }
+        .btn-primary:hover { transform: scale(1.02); }
 
-        .footer-link {
-            margin-top: 40px;
-            font-size: 0.75rem;
-            color: #555;
-            display: block;
-            letter-spacing: 1px;
+        /* SECONDARY ($50 Playbook - The "Pro" Buy) */
+        .btn-secondary {
+            background: rgba(0,0,0,0.5);
+            color: #fff;
         }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+        footer { margin-top: 40px; color: #444; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <span class="label">SECURE ACCESS</span>
-        <h1>THE NEURAL VAULT</h1>
-        <p>Authorized Archive. <br>High-fidelity AI assets & CPO Logic.</p>
+    <h1>THE NEURAL VAULT</h1>
+    <p>Authorized Asset Archive.</p>
 
-        <a href="https://8332170281457.gumroad.com/l/tiaxvy" class="btn btn-primary">
-            Unlock Executive CPO Playbook ($50)
-        </a>
+    <a href="PASTE_YOUR_NEW_GUMROAD_LINK_HERE" class="btn btn-primary">
+        <span>🧬 Cosmic Noir Prompt Pack</span>
+        <span>$5</span>
+    </a>
 
-        <a href="https://www.youtube.com/@theaidigitalexplosion" class="btn btn-secondary">
-            View Visual Data (YouTube)
-        </a>
+    <a href="https://8332170281457.gumroad.com/l/tiaxvy" class="btn btn-secondary">
+        <span>📘 Executive CPO Playbook</span>
+        <span>$50</span>
+    </a>
 
-        <span class="footer-link">SYSTEM ONLINE // 2025</span>
-    </div>
+    <a href="https://www.youtube.com/@TheNeuralVaultAI" class="btn btn-secondary" style="border:none; justify-content:center;">
+        <span style="color:#666;">View Research Data (YouTube)</span>
+    </a>
+
+    <footer>SYSTEM ONLINE // 2025</footer>
 
 </body>
 </html>
