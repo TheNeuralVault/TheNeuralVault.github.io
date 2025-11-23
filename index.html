@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEURAL VAULT | Authorized Assets</title>
-    <meta name="description" content="Secure Archive for AI Assets.">
+    
+    <meta name="description" content="The Neural Vault. Secure archive for High-Fidelity AI Prompts and Executive CPO Logic.">
+    <meta name="author" content="The Neural Vault">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* DARK LUX THEME */
+        /* TITAN V5 "DARK LUX" THEME */
         :root {
-            --bg: #050505;
+            --bg: #030305;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
             --text-main: #ffffff;
             --text-muted: #888888;
             --accent: #0070f3; 
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --glow: 0 0 40px rgba(0, 112, 243, 0.2);
         }
+
+        * { box-sizing: border-box; }
 
         body {
             background-color: var(--bg);
@@ -28,66 +37,136 @@
             min-height: 100vh;
             margin: 0;
             padding: 20px;
+            overflow-x: hidden;
         }
 
-        h1 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -1px; }
-        p { color: var(--text-muted); margin-bottom: 40px; text-align: center; }
+        /* BACKGROUND GLOW */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 112, 243, 0.15) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
 
-        /* BUTTONS */
+        .container {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            padding: 50px 30px;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: var(--glow);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+            background: linear-gradient(180deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* PRODUCT BUTTONS */
         .btn {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            max-width: 450px;
             padding: 20px;
             margin-bottom: 15px;
             border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.2s;
-            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95rem;
         }
 
-        /* PRIMARY ($5 Prompts - The "Easy" Buy) */
+        /* PRIMARY ($5 Prompts - High Click Rate) */
         .btn-primary {
-            background: var(--text-main);
-            color: #000;
-            border-color: #fff;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            background: rgba(0, 112, 243, 0.1);
+            color: #fff;
+            border-color: var(--accent);
+            box-shadow: 0 0 20px rgba(0, 112, 243, 0.15);
         }
-        .btn-primary:hover { transform: scale(1.02); }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: rgba(0, 112, 243, 0.2);
+            box-shadow: 0 0 30px rgba(0, 112, 243, 0.3);
+        }
 
-        /* SECONDARY ($50 Playbook - The "Pro" Buy) */
+        /* SECONDARY ($50 Book - Premium) */
         .btn-secondary {
-            background: rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.03);
+            color: #ccc;
+        }
+        .btn-secondary:hover {
+            border-color: #fff;
             color: #fff;
         }
-        .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-        footer { margin-top: 40px; color: #444; font-size: 0.8rem; }
+        /* TERTIARY (YouTube) */
+        .btn-tertiary {
+            justify-content: center;
+            background: transparent;
+            border: none;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        .btn-tertiary:hover { color: #fff; }
+
+        .price-tag {
+            background: rgba(255,255,255,0.1);
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+
+        footer { margin-top: 30px; color: #444; font-size: 0.7rem; letter-spacing: 2px; }
     </style>
 </head>
 <body>
 
-    <h1>THE NEURAL VAULT</h1>
-    <p>Authorized Asset Archive.</p>
+    <div class="container">
+        <h1>THE NEURAL VAULT</h1>
+        <p>Authorized Archive. <br>High-fidelity generative assets for architects.</p>
 
-    <a href="PASTE_YOUR_NEW_GUMROAD_LINK_HERE" class="btn btn-primary">
-        <span>🧬 Cosmic Noir Prompt Pack</span>
-        <span>$5</span>
-    </a>
+        <a href="https://8332170281457.gumroad.com/l/fhkite" class="btn btn-primary">
+            <span>🧬 Cosmic Noir Prompt Pack</span>
+            <span class="price-tag">$5</span>
+        </a>
 
-    <a href="https://8332170281457.gumroad.com/l/tiaxvy" class="btn btn-secondary">
-        <span>📘 Executive CPO Playbook</span>
-        <span>$50</span>
-    </a>
+        <a href="https://8332170281457.gumroad.com/l/tiaxvy" class="btn btn-secondary">
+            <span>📘 Executive CPO Playbook</span>
+            <span class="price-tag">$50</span>
+        </a>
 
-    <a href="https://www.youtube.com/@TheNeuralVaultAI" class="btn btn-secondary" style="border:none; justify-content:center;">
-        <span style="color:#666;">View Research Data (YouTube)</span>
-    </a>
+        <a href="https://www.youtube.com/@TheNeuralVaultAI" class="btn btn-tertiary">
+            View Visual Data (YouTube)
+        </a>
 
-    <footer>SYSTEM ONLINE // 2025</footer>
+        <footer>SYSTEM ONLINE // 2025</footer>
+    </div>
 
 </body>
 </html>
